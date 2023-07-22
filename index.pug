@@ -1,0 +1,70 @@
+include mixins
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pug - SASS
+        // Reset css 
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+        //Font awesome
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
+        link(rel="stylesheet", href="./css/bootstrap-5.3.0-dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="./css/main.css")
+        
+    body 
+        include componets/header.pug
+        
+        section.content-section.bg-light#about 
+            .container.px-4.px-lg-5.text-center 
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-10
+                        h2 Stylish Portfolio is the perfect theme for your next project!
+                        p.lead.mb-5 This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at 
+                            a(href="#")  Unsplash
+                        a.btn.btn-dark.btn-xl(href="#services") What We Offer
+        section.content-section.bg-primary.text-white.text-center#services            
+            .container.px-4.px-lg-5
+                .content-section-heading
+                    h3.text-secondary.mb-0 Services
+                    h2.mb-5 What We Offer                
+                .row.gx-4.gx-lg-5
+                    
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fas.fa-mobile                       
+                        h4 
+                            strong Responsive
+                        p.text-faded.mb-0 Looks great on any screen size!
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fas.fa-pen            
+                        h4 
+                            strong Redesigned
+                        p.text-faded.mb-0 Freshly redesigned for Bootstrap 5.
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fas.fa-thumbs-up                          
+                        h4 
+                            strong Favorited
+                        p.text-faded.mb-0
+                            | Millions of users 
+                            i.fas.fa-heart
+                            | Start Bootstrap!
+                            
+                            
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fas.fa-question                                                           
+                        h4 
+                            strong Question
+                        p.text-faded.mb-0 I mustache you a question...
+        section.callout
+            .container.px-4.px-lg-5.text-center   
+                h2.mx-auto.mb-5 
+                    | Welcome to 
+                    em  your   
+                    | next website!
+                a.btn.btn-primary.btn-xl(href="#") Download Now!
+        include componets/footer.pug  
+        
